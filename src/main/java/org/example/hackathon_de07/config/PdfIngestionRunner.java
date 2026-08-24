@@ -52,7 +52,7 @@ public class PdfIngestionRunner implements CommandLineRunner {
             TikaDocumentReader documentReader = new TikaDocumentReader(pdfResource);
             List<Document> documents = documentReader.get();
 
-            TokenTextSplitter textSplitter = new TokenTextSplitter();
+            TokenTextSplitter textSplitter = TokenTextSplitter.builder().build();
             List<Document> splitDocuments = textSplitter.apply(documents);
 
             if (!tableExists) {
