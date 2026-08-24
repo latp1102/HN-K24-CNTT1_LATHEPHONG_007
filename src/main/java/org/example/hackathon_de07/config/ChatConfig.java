@@ -22,7 +22,7 @@ public class ChatConfig {
     @Bean
     public ChatClient chatClient(ChatClient.Builder chatClientBuilder) {
         return chatClientBuilder
-                .defaultSystem("Bạn là trợ lý AI chat bot..." )
+                .defaultSystem("Bạn là trợ lý AI chat bot về nhà hàng nhiệm vụ của bạn là trả lời câu hỏi của khách hàng thời gian phục vụ chính sách đổi trả và hủy đơn. Thanh toán " )
                 .defaultAdvisors(
                         MessageChatMemoryAdvisor.builder(chatMemory()).build()
                 )

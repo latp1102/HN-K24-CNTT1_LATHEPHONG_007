@@ -6,7 +6,7 @@ spring:
   ai:
     openai:
       base-url: https://openrouter.ai/api/v1
-      api-key: ${openai.api-key}
+      api-key:
       chat:
         model: anthropic/claude-3-haiku
       embedding:
@@ -19,8 +19,8 @@ spring:
         initialize-schema: true
   datasource:
     url: jdbc:postgresql://${database.host}:5432/postgres
-    username: ${database.username}
-    password: ${database.password}
+    username:
+    password:
   #  sql:
   #    init:
   #      mode: always
